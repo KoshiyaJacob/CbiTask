@@ -1,0 +1,506 @@
+{
+	"info": {
+		"_postman_id": "1d495a7b-7d03-4bb1-84c4-535de3eeb9c7",
+		"name": "Pet Store User Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32670818"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 10000,\r\n  \"username\": \"Test 123\",\r\n  \"firstName\": \"Koshiya\",\r\n  \"lastName\": \"Jacob\",\r\n  \"email\": \"koshiyajacob@gmail.com\",\r\n  \"password\": \"123@abc\",\r\n  \"phone\": \"0450034108\",\r\n  \"userStatus\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User by username",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/Koshi",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"Koshi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create array for list of users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"id\": 100001,\r\n        \"username\": \"Test 1234\",\r\n        \"firstName\": \"Jacob\",\r\n        \"lastName\": \"Jenil\",\r\n        \"email\": \"jacobjenil@gmail.com\",\r\n        \"password\": \"12341234\",\r\n        \"phone\": \"04233455555\",\r\n        \"userStatus\": 1\r\n    },\r\n    {\r\n        \"id\": 100002,\r\n        \"username\": \"Test 12345\",\r\n        \"firstName\": \"Jacob2\",\r\n        \"lastName\": \"Jenil2\",\r\n        \"email\": \"jacobjenil2@gmail.com\",\r\n        \"password\": \"123412345\",\r\n        \"phone\": \"04233455566\",\r\n        \"userStatus\": 1\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/createWithList",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"createWithList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create array2 for list of users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"id\": 10003,\r\n        \"username\": \"Test1233\",\r\n        \"firstName\": \"Koshiya3\",\r\n        \"lastName\": \"Jacob3\",\r\n        \"email\": \"koshiyajacob3@gmail.com\",\r\n        \"password\": \"123@abcd\",\r\n        \"phone\": \"045003410888\",\r\n        \"userStatus\": 1\r\n    },\r\n    {\r\n        \"id\": 10004,\r\n        \"username\": \"Test12344\",\r\n        \"firstName\": \"Koshiya4\",\r\n        \"lastName\": \"Jacob4\",\r\n        \"email\": \"koshiyajacob4@gmail.com\",\r\n        \"password\": \"123@abcd\",\r\n        \"phone\": \"045003410448\",\r\n        \"userStatus\": 0\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/createWithArray",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"createWithArray"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User Name",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 10003,\r\n    \"username\": \"Test1233\",\r\n    \"firstName\": \"Koshi\",\r\n    \"lastName\": \"Jacob Jenil\",\r\n    \"email\": \"koshiyajacob3@gmail.com\",\r\n    \"password\": \"123@acd\",\r\n    \"phone\": \"045003410888\",\r\n    \"userStatus\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/Test1233",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"Test1233"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Updated user name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/Test1233",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"Test1233"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/Test 12345",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"Test 12345"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/login?username=Test 123&password=123@abc",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "Test 123"
+						},
+						{
+							"key": "password",
+							"value": "123@abc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/logout",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List of user using Random value",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"let USER1_ID = Math.floor(Math.random() * 100000); //58647\r",
+							"\r",
+							"pm.collectionVariables.set(\"user1_id\" , USER1_ID);\r",
+							"\r",
+							"//console.log(\"For user1, ID : \", USER1_ID );\r",
+							"\r",
+							"////////////////////////////////////////////////////////\r",
+							"\r",
+							"let USER2_ID = Math.floor(Math.random() * 100000); //58647\r",
+							"\r",
+							"pm.collectionVariables.set(\"user2_id\" , USER2_ID);\r",
+							"\r",
+							"//console.log(\"For user2, ID : \", USER2_ID );\r",
+							"\r",
+							"/////////////////////////////////////////////////////////\r",
+							"\r",
+							"//Company name: CommonWealth Bank(username start with \"CBI-\") and format: \"CBI-*****\")\r",
+							"\r",
+							"let USER1_NAME = \"CBI-\" + Math.floor(Math.random() * 100000);\r",
+							"\r",
+							"pm.collectionVariables.set(\"user1_name\" , USER1_NAME);\r",
+							"\r",
+							"//console.log(\"For user1, USER NAME : \" , USER1_NAME);\r",
+							"\r",
+							"///////////////////////////////////////////////////////////////////////\r",
+							"\r",
+							"let USER2_NAME = \"CBI-\" + Math.floor(Math.random() * 100000);\r",
+							"\r",
+							"pm.collectionVariables.set(\"user2_name\" , USER2_NAME);\r",
+							"\r",
+							"//console.log(\"For user2, USER NAME : \" , USER2_NAME);\r",
+							"\r",
+							"/////////////////////////////////////////////////////////////////"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"////////////////////////////////////////////////////////////////\r",
+							"\r",
+							"let jsonResponse = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Verify response status is 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"//Response body validation\r",
+							"\r",
+							"pm.test(\"Verify response body code is 200\" , function(){\r",
+							"    pm.expect(200).to.eql(jsonResponse.code);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Verify response body type value is unknown\" , function(){\r",
+							"    pm.expect(\"unknown\").to.eql(jsonResponse.type);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"pm.test(\"Verify response message value is OK\" , function(){\r",
+							"    pm.expect(\"ok\").to.eql(jsonResponse.message);\r",
+							"});\r",
+							"\r",
+							"/////////////////////////////////////////////////////////////////////////\r",
+							"\r",
+							"//Response header validation\r",
+							"\r",
+							"pm.test(\"Verify response header key 'Content-Type' \" , function(){\r",
+							"    pm.expect(\"application/json\").to.eql(pm.response.headers.get(\"Content-Type\"));\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"id\": \"{{user1_id}}\",\r\n        \"username\": \"{{user1_name}}\",\r\n        \"firstName\": \"Jacob5\",\r\n        \"lastName\": \"Jenil5\",\r\n        \"email\": \"jacobjenil5@gmail.com\",\r\n        \"password\": \"12341734\",\r\n        \"phone\": \"04233455555\",\r\n        \"userStatus\": 1\r\n    },\r\n    {\r\n        \"id\": \"{{user2_id}}\",\r\n        \"username\": \"{{user2_name}}\",\r\n        \"firstName\": \"Jacob6\",\r\n        \"lastName\": \"Jenil6\",\r\n        \"email\": \"jacobjenil6@gmail.com\",\r\n        \"password\": \"123492345\",\r\n        \"phone\": \"04233455566\",\r\n        \"userStatus\": 1\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/createWithList",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"createWithList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set user data from JSON file",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"//generate random id\r",
+							"//fields data passed from json file\r",
+							"\r",
+							"let user_id = Math.floor(Math.random() * 10000);\r",
+							"\r",
+							"pm.collectionVariables.set(\"userId\" ,user_id );\r",
+							"\r",
+							"//set required value from Json file\r",
+							"\r",
+							"pm.environment.set(\"user_name\", pm.iterationData.get(\"username\"));\r",
+							"\r",
+							"pm.environment.set(\"user_firstname\", pm.iterationData.get(\"firstName\"));\r",
+							"\r",
+							"pm.environment.set(\"user_lastname\", pm.iterationData.get(\"lastName\"));\r",
+							"\r",
+							"pm.environment.set(\"user_email\", pm.iterationData.get(\"email\"));\r",
+							"\r",
+							"pm.environment.set(\"user_password\", pm.iterationData.get(\"password\"));\r",
+							"\r",
+							"pm.environment.set(\"user_phone\", pm.iterationData.get(\"phone\"));\r",
+							"\r",
+							"pm.environment.set(\"user_status\", pm.iterationData.get(\"userStatus\"));\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let json_request = JSON.parse(pm.request.body.raw);\r",
+							"\r",
+							"console.log(\"json request: \" , json_request);\r",
+							"\r",
+							"//Get all the value of collection variables\r",
+							"\r",
+							"console.log(\"User Id : \", json_request.id);\r",
+							"console.log(\"User name : \", json_request.username);\r",
+							"console.log(\"User firstname : \", json_request.firstName);\r",
+							"console.log(\"User lasname : \", json_request.lastName);\r",
+							"console.log(\"User email : \", json_request.email);\r",
+							"console.log(\"User password : \", json_request.password);\r",
+							"console.log(\"User phone : \",json_request.phone);\r",
+							"console.log(\"User userStatus : \", json_request.userStatus);\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": {{userId}},\r\n    \"username\": \"{{user_name}}\",\r\n    \"firstName\": \"{{user_firstname}}\",\r\n    \"lastName\": \"{{user_lastname}}\",\r\n    \"email\": \"{{user_email}}\",\r\n    \"password\": \"{{user_password}}\",\r\n    \"phone\": \"{{user_phone}}\",\r\n    \"userStatus\": {{user_status}}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/user",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "user1_id",
+			"value": ""
+		},
+		{
+			"key": "user2_id",
+			"value": ""
+		},
+		{
+			"key": "user1_name",
+			"value": ""
+		},
+		{
+			"key": "user2_name",
+			"value": ""
+		},
+		{
+			"key": "userId",
+			"value": ""
+		},
+		{
+			"key": "user_name",
+			"value": ""
+		},
+		{
+			"key": "user_firstname",
+			"value": ""
+		},
+		{
+			"key": "user_lastname",
+			"value": ""
+		},
+		{
+			"key": "user_email",
+			"value": ""
+		},
+		{
+			"key": "user_password",
+			"value": ""
+		},
+		{
+			"key": "user_phone",
+			"value": ""
+		},
+		{
+			"key": "user_status",
+			"value": ""
+		}
+	]
+}
