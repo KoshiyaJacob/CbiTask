@@ -12,3 +12,4 @@
     Body -(List of user details), Pre-request- (script for random userid and username), Tests - (Script for Response body validation and Response header validation)
 
 10. Get data from the json file and create the test environment to set the base url as localhost
+11. Run the code in Jenkins.
